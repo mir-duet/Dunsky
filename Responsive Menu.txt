@@ -1,0 +1,41 @@
+			<div class="col-sm-9 col-nav">					
+					<nav class="navbar">
+					  <div class="container-fluid">
+						<div>
+						  <ul class="nav navbar-nav">
+							<li class="active">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">ABOUT US <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Welcome</a></li>
+									<li><a href="#">Team</a></li>
+									<li><a href="#">Mission & Values</a></li>
+									<li><a href="#">Sustainability</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">EXPERTISE <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Sectors</a></li>
+									<li><a href="#">Service Areas</a></li>
+									<li><a href="#">Approach</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">CLIENTS <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Our Clients</a></li>
+									<li><a href="#">Testmonials</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">CONTACT US</a>
+							</li>
+						  </ul>
+						  <ul class="nav navbar-nav navbar-right">
+							<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+						  </ul>
+						</div>
+					  </div>
+					</nav>
+				</div>

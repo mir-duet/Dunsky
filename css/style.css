@@ -1,0 +1,342 @@
+* { 
+	margin:0; 
+	padding:0;
+}
+body{
+    background: #1b3a68;
+}
+.upw-content a {
+    color: #FFF;
+    text-decoration: none;
+}
+.clear{
+    height: 30px; 
+}
+
+a:focus, a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*...............Logo Slider Nav.................*/
+.logo{
+    margin: 38px auto;
+}
+.col-nav{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+.navbar {
+    margin-bottom: 0px;
+    border: .5px solid transparent;
+}
+
+/*....................Left Side.....................*/
+
+
+.left{
+    min-height: 500px;
+    background: transparent;
+    broder: 1px solid green;
+}
+.left h2{
+    font-size: 150%;
+    color: #F93;
+}
+.left h5>a{
+    color: #F93;
+    text-decoration: underline;
+    
+}
+.left h5>a:hover{
+    color: #fff;
+    text-decoration: none;
+    
+}
+.left p {
+    color: #FFF;
+    text-decoration: none;
+}
+.left a.bulletin {
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFF;
+    background: #F93 none repeat scroll 0% 0%;
+    border: 1px solid #F93;
+    display: block;
+    text-decoration: none;
+    padding: 3px 3px;
+    border-radius: 5px;
+}
+.left a.bulletin:hover {
+    color: #1B3A68;
+    text-decoration: none;
+}
+.upw-content .post-title a:hover {
+    text-decoration: none;
+    color:#ff9933;
+}
+.upw-content .post-date { font-size: 10px;}
+
+
+/* ............Content...................*/
+.content{
+    min-height: 500px;
+    background: #ffffff;
+    broder: 1px solid green;
+}
+/* ............Right Content...................*/
+.aside {
+    padding: 30px 0px 0px;
+    float: right;
+}
+.aside .slideshow {
+    position: relative;
+    height: auto;
+}
+.aside .slideset {
+    overflow: hidden;
+}
+.aside blockquote {
+    color: #939393;
+    background: transparent url("../images/quote1.png") no-repeat scroll 0px 2px;
+    font-size: 16px;
+    font-family: "calibriregular";
+    margin: 0px 0px 10px;
+    padding: 0px 0px 0px 2px;
+    line-height: 17px;
+    border-left: 0; 
+}
+blockquote::before, blockquote::after, q::before, q::after {
+
+    content: "";
+
+}
+blockquote, blockquote::before, blockquote::after, q, q::before, q::after {
+    quotes: none;
+}
+.aside blockquote q {
+    font-style: italic;
+    text-indent: 16px;
+    margin: 0px 0px 21px;
+    display: block;
+}
+.aside blockquote span {
+    padding: 0px 18px 0px 0px;
+    background: transparent url("../images/quote2.png") no-repeat scroll 100% 100%;
+}
+.aside blockquote cite {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+    color: #F93;
+    font-style: normal;
+}
+.aside .logo {
+    display: block;
+    margin: 0px 0px 30px;
+}
+.aside .logo img {
+    height: auto;
+    max-height: 100px;
+    padding: 20px;
+    vertical-align: top;
+    width: 100%;
+}
+.aside .more a {
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #F93;
+    font-size: 12px;
+    line-height: 15px;
+    float:right;
+    margin-right: 20px;
+}
+.aside .more a:hover {
+    text-decoration: none;
+}
+
+
+/* ............Footer...................*/
+#footer {
+    font-size: 9px;
+    line-height: 11px;
+    text-align: center;
+    padding: 0px 0px 10px;
+    overflow: hidden;
+}
+#footer .nav-holder {
+    background: #1A3A67 none repeat scroll 0% 0%;
+    margin: 10px 0px 7px;
+}
+#footer .copyright {
+    color: #FFF;
+}
+#footer .sub-nav {
+    vertical-align: top;
+    text-transform: uppercase;
+    margin: 0px;
+    padding: 2px 0px;
+    display: inline-block;
+    overflow: hidden;
+}
+#footer .sub-nav li {
+    float: left;
+    list-style: outside none none;
+    padding: 0px 4px 0px 5px;
+    background: transparent url("images/separator.png") no-repeat scroll 0px 2px;
+}
+#footer .sub-nav a:hover {
+    text-decoration: none;
+    color: #FFA449;
+}
+
+
+
+
+
+/*...............Menu......................*/
+
+#cssmenu > ul,
+#cssmenu > ul li,
+#cssmenu > ul ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+#cssmenu > ul {
+  position: relative;
+  z-index: 597;
+  float: left;
+}
+#cssmenu > ul li {
+  float: left;
+  min-height: 1px;
+  line-height: 1.3em;
+  vertical-align: middle;
+  padding: 10px;
+}
+#cssmenu > ul li.hover,
+#cssmenu > ul li:hover {
+  z-index: 599;
+  cursor: default;
+}
+#cssmenu > ul ul {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 598;
+}
+#cssmenu > ul ul li {
+  float: none;
+}
+#cssmenu > ul li:hover > ul {
+  visibility: visible;
+}
+/* Align last drop down RTL */
+/* Theme Styles */
+#cssmenu > ul a:link {
+  text-decoration: none;
+}
+#cssmenu > ul a:active {
+  color: #ffa500;
+}
+#cssmenu li {
+  padding: 0;
+  color: #000;
+}
+#cssmenu {
+  font-family: 'Lato', sans-serif;
+  width: auto;
+  background: #1b3a68;
+  font-size: 14px;
+
+}
+#cssmenu > ul {
+  padding: 0 5px;
+  display: block;
+  float: none;
+  zoom: 1;
+}
+#cssmenu > ul:before {
+  content: '';
+  display: block;
+}
+#cssmenu > ul:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#cssmenu > ul > li {
+  padding: 1px 5px;
+  font-size: 16px;
+}
+#cssmenu > ul > li > a,
+#cssmenu > ul > li > a:link,
+#cssmenu > ul > li > a:visited {
+  text-shadow: 0 -1px 1px #000000;
+  color: #fff;
+  padding: 7px 20px;
+  display: block;
+}
+#cssmenu > ul > li > a:hover,
+#cssmenu > ul > li:hover > a {
+  background-color: #ff9933;
+}
+#cssmenu li li a {
+  color: #1b3a68;
+  font-size: 14px;
+}
+#cssmenu li li a:hover {
+  color: #FFF;
+  background: #F93;
+  border-color: #ff9933;
+}
+
+#cssmenu li li a:hover {
+    color: #FFF;
+    background: #F93 none repeat scroll 0% 0%;
+    border-color: #F93;
+}
+#cssmenu ul ul {
+  margin: 0 10px;
+  padding: 0 10px;
+  float: none;
+  background: #ffffff;
+  border: 2px solid #1b3a68;
+  border-top: none;
+  right: 0;
+  left: 0;
+
+}
+#cssmenu ul > li > ul > li {
+  margin: 0 10px 0 0;
+  position: relative;
+  padding: 0;
+  float: left;
+}
+#cssmenu ul > li > ul > li > a {
+  padding: 7px 20px 7px 10px;
+  display: block;
+}
+#cssmenu ul > li > ul > li.has-sub > a:before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 6px;
+  border: 5px solid transparent;
+  border-top: 5px solid #1b3a68;
+}
+#cssmenu ul > li > ul > li.has-sub > a:hover:before {
+  border-top: 5px solid #ff9933;
+}
+#cssmenu ul ul ul {
+  width: 200px;
+  top: 100%;
+  border: 2px solid #1b3a68;
+}
+#cssmenu ul ul ul li {
+  float: none;
+}

@@ -1,0 +1,4 @@
+<h2>Home</h2>
+<p>Welcome to Dunsky Energy Consulting. For those who don’t know us, we provide top-level research, analysis and strategic counsel in support of clients’ energy efficiency and renewable energy (EE/RE) goals.
+    Our clients include leading utilities, government agencies, non-profits and private firms throughout North America. They seek our help to achieve energy, economic or environmental goals through EE/RE. They may ask us to pinpoint options, to assess their relative costs and benefits, to define policy and regulatory frameworks, to develop or evaluate short and long-term plans, and to design and implement the strategies needed to achieve their goals.
+    You’ll find more information about our services and expertise on this web site. If you want more information, please feel free to contact us</p>
