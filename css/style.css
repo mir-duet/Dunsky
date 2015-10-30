@@ -20,7 +20,7 @@ a:focus, a:hover {
 
 /*...............Logo Slider Nav.................*/
 .logo{
-    margin: 38px auto;
+    margin: 62px auto;
 }
 .col-nav{
 	padding-right: 0px;
@@ -139,6 +139,7 @@ blockquote, blockquote::before, blockquote::after, q, q::before, q::after {
 .aside .logo img {
     height: auto;
     max-height: 100px;
+    max-width: 200px;
     padding: 20px;
     vertical-align: top;
     width: 100%;

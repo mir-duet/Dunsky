@@ -10,21 +10,56 @@
 
         <!-- pgw_slider -->
         <link href="<?php echo base_url(); ?>pgw_slider/pgwslider.css" type="text/css" media="all" rel="stylesheet" />
-        <script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>pgw_slider/pgwslider.js"></script>
-
         <!-- Bootstrap Css  -->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/bootstrap.min.css" media="all" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/bootstrap-theme.min.css" media="all" />
+        
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css_slider/slider.css" media="all" />
         <!-- main CSS -->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/style.css" media="all" />
-        
-        <script type="text/javascript" language="javascript">
-            $(document).ready(function() {
-                $('.pgwSlider').pgwSlider();
+        <!-- Slider JS -->
+        <script type="text/javascript" src="js_slider/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="js_slider/jssor.slider.mini.js"></script>
+        <script>
+            jQuery(document).ready(function ($) {
+
+                var jssor_1_options = {
+                  $AutoPlay: true,
+                  $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                  },
+                  $ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,
+                    $Cols: 3,
+                    $SpacingX: 4,
+                    $SpacingY: 4,
+                    $Orientation: 2,
+                    $Align: 0
+                  }
+                };
+
+                var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+                //responsive code begin
+                //you can remove responsive code if you don't want the slider scales while window resizes
+                function ScaleSlider() {
+                    var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                    if (refSize) {
+                        refSize = Math.min(refSize, 980);
+                        jssor_1_slider.$ScaleWidth(refSize);
+                    }
+                    else {
+                        window.setTimeout(ScaleSlider, 30);
+                    }
+                }
+                ScaleSlider();
+                $(window).bind("load", ScaleSlider);
+                $(window).bind("resize", ScaleSlider);
+                $(window).bind("orientationchange", ScaleSlider);
+                //responsive code end
             });
         </script>
     </head>
-
     <body>
         <div class="container">   
             <div class="clear"></div>
@@ -35,52 +70,68 @@
                     </div>
                 </div>
                 <div class="col-sm-10 col-nav">
-                    <div class="cntr mt20">
-                        <div class="pgwSlider wide">
-                            <div class="ps-current">
-                                    <ul>
-                                        <li class="elt_1">
-                                            <img src="http://static.pgwjs.com/img/pg/slider/paris.jpg" alt="Paris, France">
-                                        </li>
-                                        <li class="elt_2">
-                                            <img src="http://static.pgwjs.com/img/pg/slider/montreal.jpg" alt="Montréal, Canada">
-                                        </li>
-                                        <li class="elt_3">
-                                            <img src="http://static.pgwjs.com/img/pg/slider/shanghai.jpg" alt="Shanghai, China">
-                                        </li>
-                                        <li style="z-index: 2; display: list-item; opacity: 1;" class="elt_4">
-                                            <a href="http://www.nyc.gov" target="_blank">
-                                                <img src="http://static.pgwjs.com/img/pg/slider/new-york.jpg" alt="New York, USA">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <span  class="ps-caption">
-                                        <a href="http://www.nyc.gov" target="_blank">
-                                            <b>New York, USA</b>
-                                        </a>
-                                    </span>
-                            </div>
-                            <ul class="ps-list">
-                                <li >
-                                    <img src="http://static.pgwjs.com/img/pg/slider/paris.jpg" alt="Paris, France" data-description="Eiffel Tower and Champ de Mars">
-                                    <span>Paris, France</span>
-                                </li>
-                                <li >
-                                    <img src="http://static.pgwjs.com/img/pg/slider/montreal_mini.jpg" alt="Montréal, Canada" data-large-src="http://static.pgwjs.com/img/pg/slider/montreal.jpg">
-                                    <span>Montréal, Canada</span>
-                                </li>
-                                <li >
-                                    <img src="http://static.pgwjs.com/img/pg/slider/shanghai.jpg">
-                                    <span>Shanghai, China</span>
-                                </li>
-                                <li >
-                                    <a href="http://www.nyc.gov" target="_blank">
-                                        <img src="http://static.pgwjs.com/img/pg/slider/new-york.jpg">
-                                        <span>New York, USA</span>
-                                    </a>
-                                </li>
-                            </ul>
+                    <div id="jssor_1" class="slide">
+                        <!-- Loading Screen -->
+                        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                            <div style="position:absolute;display:block;background:url('img_slider/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
                         </div>
+                        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
+                            <div data-p="112.50" style="display: none;">
+                                <img data-u="image" src="img_slider/002.jpg" />
+                                <div data-u="thumb">
+                                    <img class="i" src="img_slider/thumb-002.jpg" />
+                                    <div class="t">Banner Rotator</div>
+                                    <div class="c">360+ touch swipe slideshow effects</div>
+                                </div>
+                            </div>
+                            <div data-p="112.50" style="display: none;">
+                                <img data-u="image" src="img_slider/003.jpg" />
+                                <div data-u="thumb">
+                                    <img class="i" src="img_slider/thumb-003.jpg" />
+                                    <div class="t">Image Gallery</div>
+                                    <div class="c">Image gallery with thumbnail navigation</div>
+                                </div>
+                            </div>
+                            <div data-p="112.50" style="display: none;">
+                                <img data-u="image" src="img_slider/004.jpg" />
+                                <div data-u="thumb">
+                                    <img class="i" src="img_slider/thumb-004.jpg" />
+                                    <div class="t">Carousel</div>
+                                    <div class="c">Touch swipe, mobile device optimized</div>
+                                </div>
+                            </div>
+                            <div data-p="112.50" style="display: none;">
+                                <img data-u="image" src="img_slider/005.jpg" />
+                                <div data-u="thumb">
+                                    <img class="i" src="img_slider/thumb-005.jpg" />
+                                    <div class="t">Themes</div>
+                                    <div class="c">30+ professional themems + growing</div>
+                                </div>
+                            </div>
+                            <div data-p="112.50" style="display: none;">
+                                <img data-u="image" src="img_slider/006.jpg" />
+                                <div data-u="thumb">
+                                    <img class="i" src="img_slider/thumb-006.jpg" />
+                                    <div class="t">Tab Slider</div>
+                                    <div class="c">Tab slider with auto play options</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Thumbnail Navigator -->
+                        <div data-u="thumbnavigator" class="jssort11" style="position:absolute;left:605px;top:0px;font-family:Arial, Helvetica, sans-serif;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;right:5px;width:200px;height:300px;" data-autocenter="2">
+                            <!-- Thumbnail Item Skin Begin -->
+                            <div data-u="slides" style="cursor: default;">
+                                <div data-u="prototype" class="p">
+                                    <div data-u="thumbnailtemplate" class="tp"></div>
+                                </div>
+                            </div>
+                            <!-- Thumbnail Item Skin End -->
+                        </div>
+                        <!-- Arrow Navigator -->
+                        <span data-u="arrowleft" class="jssora02l" style="top:123px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+                        <span data-u="arrowright" class="jssora02r" style="top:123px;right:218px;width:55px;height:55px;" data-autocenter="2"></span>
+                        <a href="http://www.jssor.com" style="display:none">Jssor Slider</a>
                     </div>
                 </div>
             </div>
@@ -177,6 +228,9 @@
         </div>
         <!-- Bootstrap core JavaScript
         ================================================== -->
+
+        
+        <script type="text/javascript" src="<?php echo base_url(); ?>pgw_slider/pgwslider.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery-1.11.2.min.js" ></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/bootstrap.min.js" ></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/dunsky.js"></script>
